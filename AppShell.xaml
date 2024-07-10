@@ -5,14 +5,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Quezada_Evaluacion3P"
     xmlns:v="clr-namespace:Quezada_Evaluacion3P.Views"
+    Shell.FlyoutBehavior="Disabled"
     Title="Quezada_Evaluacion3P">
 
     <TabBar>
-        <Tab Title="Games" Icon="mainpage.png">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        <Tab Title="Games" 
+             Icon="mainpage.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:MainPage}" 
+                Route="MainPage"/>
         </Tab>
-        <Tab Title="Saved Games" Icon="iconinfo.png">
-            <ShellContent ContentTemplate="{DataTemplate local:AQGamesGuardados}" />
+        <Tab Title="Saved Games" 
+             Icon="iconinfo.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate v:AQGamesGuardados}" 
+                Route="AQGamesGuardados"/>
         </Tab>
     </TabBar>
 </Shell>

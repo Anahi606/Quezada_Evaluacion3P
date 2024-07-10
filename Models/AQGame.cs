@@ -9,8 +9,8 @@ namespace Quezada_Evaluacion3P.Models
     public class AQGame
     {
         public int Id { get; set; }
-        public string? Nombre { get; set; }
-        public string? Descripcion { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
     }
 }
 

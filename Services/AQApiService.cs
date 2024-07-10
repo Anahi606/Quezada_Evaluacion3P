@@ -19,9 +19,11 @@ namespace Quezada_Evaluacion3P.Services
             using (HttpClient client = new HttpClient())
             {
                 var response = await client.GetStringAsync(ApiUrl);
-                var games = JsonConvert.DeserializeObject<List<AQGame>>(response);
-                return games;
+                var apiResponse = JsonConvert.DeserializeObject<AQApiGameRespuesta>(response);
+                return apiResponse?.Resultados ?? new List<AQGame>();
             }
         }
     }
 }
+
+
