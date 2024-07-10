@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Quezada_Evaluacion3P"
+    xmlns:v="clr-namespace:Quezada_Evaluacion3P.Views"
     Title="Quezada_Evaluacion3P">
 
     <TabBar>
@@ -11,7 +12,7 @@
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
         <Tab Title="Saved Games" Icon="iconinfo.png">
-            <ShellContent ContentTemplate="{DataTemplate local:SavedGamesPage}" />
+            <ShellContent ContentTemplate="{DataTemplate local:AQGamesGuardados}" />
         </Tab>
     </TabBar>
 </Shell>

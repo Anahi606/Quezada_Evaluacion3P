@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:Quezada_Evaluacion3P.ViewModels"
-             x:Class="Quezada_Evaluacion3P.Views.AQGamesGuardados">
+             x:Class="Quezada_Evaluacion3P.Views.AQGamesGuardados.cs">
 
     <ContentPage.BindingContext>
         <vm:AQGameViewModel />
@@ -18,3 +18,4 @@
         </ListView>
     </StackLayout>
 </ContentPage>
+    
