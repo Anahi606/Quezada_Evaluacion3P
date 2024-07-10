@@ -4,12 +4,14 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Quezada_Evaluacion3P"
-    Shell.FlyoutBehavior="Disabled"
     Title="Quezada_Evaluacion3P">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <Tab Title="Games" Icon="mainpage.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="Saved Games" Icon="iconinfo.png">
+            <ShellContent ContentTemplate="{DataTemplate local:SavedGamesPage}" />
+        </Tab>
+    </TabBar>
 </Shell>

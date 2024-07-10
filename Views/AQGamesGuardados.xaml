@@ -1,18 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:Quezada_Evaluacion3P.ViewModels"
-             x:Class="Quezada_Evaluacion3P.MainPage">
+             x:Class="Quezada_Evaluacion3P.Views.AQGamesGuardados">
 
     <ContentPage.BindingContext>
         <vm:AQGameViewModel />
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <ListView ItemsSource="{Binding Games}">
+        <ListView ItemsSource="{Binding SavedGames}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" Detail="{Binding Description}" />
+                    <TextCell Text="{Binding Nombre}" Detail="{Binding Descripcion}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
