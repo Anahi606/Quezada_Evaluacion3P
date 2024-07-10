@@ -29,6 +29,3 @@ namespace Quezada_Evaluacion3P.Services
         }
     }
 }
-
-
-

@@ -12,8 +12,6 @@ using Quezada_Evaluacion3P.Models;
 using Quezada_Evaluacion3P.Services;
 using Microsoft.Maui.Controls;
 using System.Windows.Input;
-//using Android.Net;
-
 
 namespace Quezada_Evaluacion3P.ViewModels
 {
@@ -79,7 +77,16 @@ namespace Quezada_Evaluacion3P.ViewModels
 
         private async void LoadSavedGames()
         {
-            SavedGames = new ObservableCollection<AQGame>(await App.Database.GetGamesAsync());
+            var games = await App.Database.GetGamesAsync();
+            if (games == null || games.Count == 0)
+            {
+                Console.WriteLine("No se encontraron juegos guardados.");
+            }
+            else
+            {
+                Console.WriteLine($"{games.Count} juegos cargados.");
+            }
+            SavedGames = new ObservableCollection<AQGame>(games);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

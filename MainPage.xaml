@@ -13,7 +13,7 @@
         <ListView ItemsSource="{Binding Games}" SelectedItem="{Binding SelectedGame}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" Detail="{Binding Description}" />
+                    <TextCell Text="{Binding Nombre}" Detail="{Binding Descripcion}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
