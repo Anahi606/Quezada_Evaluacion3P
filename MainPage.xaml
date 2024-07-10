@@ -9,12 +9,14 @@
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <ListView ItemsSource="{Binding Games}">
+        <Button Text="Listar Juegos" Command="{Binding LoadGamesCommand}" />
+        <ListView ItemsSource="{Binding Games}" SelectedItem="{Binding SelectedGame}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Nombre}" Detail="{Binding Descripcion}" />
+                    <TextCell Text="{Binding Name}" Detail="{Binding Description}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Text="Guardar Juego" Command="{Binding SaveGameCommand}" IsEnabled="{Binding SelectedGame, Converter={StaticResource NullToBoolConverter}}" />
     </StackLayout>
 </ContentPage>

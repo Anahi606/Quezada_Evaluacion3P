@@ -9,13 +9,13 @@
     Title="Quezada_Evaluacion3P">
 
     <TabBar>
-        <Tab Title="Games" 
+        <Tab Title="Juegos" 
              Icon="mainpage.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate local:MainPage}" 
                 Route="MainPage"/>
         </Tab>
-        <Tab Title="Saved Games" 
+        <Tab Title="Juegos Guardados" 
              Icon="iconinfo.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate v:AQGamesGuardados}" 
